@@ -7,7 +7,7 @@ A simple TypeScript + Express API that provides basic math operations with input
 ## 📦 Features
 
 - TypeScript + Express server
-- Math operations: addition, subtraction, multiplication, division
+- Math operations: addition, subtraction, multiplication, division, power
 - Input validation with Joi
 - Clear separation of concerns: `controllers`, `services`, `routes`, `middlewares`, `validators`
 - Error handling with custom HTTP status codes
@@ -93,6 +93,7 @@ POST /api/math/add
 POST /api/math/subtract
 POST /api/math/multiply
 POST /api/math/divide
+POST /api/math/power
 ```
 
 ### Example Request:
