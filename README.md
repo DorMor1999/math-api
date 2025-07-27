@@ -139,7 +139,7 @@ This project uses **GitHub Actions** to automate Continuous Integration and Cont
 
 3. **Deployment**
 
-   - On successful build and tests, the latest code is automatically deployed to [Render](https://render.com).
+   - On successful build and tests, the latest code is automatically deployed to [Render](https://math-api-5mw5.onrender.com).
    - Render pulls the new code, installs dependencies, builds, and starts the app.
    - This ensures your production environment is always up-to-date with `main`.
 
