@@ -67,6 +67,7 @@ npm run test
 ```
 
 Includes:
+
 - Unit tests for service logic
 - Integration tests for controller endpoints
 
@@ -95,6 +96,7 @@ POST /api/math/divide
 ```
 
 ### Example Request:
+
 ```json
 POST /api/math/add
 {
@@ -104,6 +106,7 @@ POST /api/math/add
 ```
 
 ### Example Response:
+
 ```json
 {
   "result": 8
@@ -117,6 +120,33 @@ POST /api/math/add
 - Uses Joi to validate `a` and `b` are required and must be numbers.
 - Returns `400 Bad Request` if validation fails.
 - Other internal errors return `500 Internal Server Error`.
+
+---
+
+## 🔄 CI/CD Workflow
+
+This project uses **GitHub Actions** to automate Continuous Integration and Continuous Deployment (CI/CD):
+
+1. **Trigger**  
+   On every push or pull request to the `main` branch, the workflow is triggered automatically.
+
+2. **Build and Test**
+
+   - The workflow sets up Node.js environment.
+   - Installs dependencies (`npm install`).
+   - Runs all tests (`npm test`) including unit and integration tests.
+   - Builds the TypeScript project (`npm run build`).
+
+3. **Deployment**
+
+   - On successful build and tests, the latest code is automatically deployed to [Render](https://render.com).
+   - Render pulls the new code, installs dependencies, builds, and starts the app.
+   - This ensures your production environment is always up-to-date with `main`.
+
+4. **Benefits**
+   - Automated quality checks prevent broken code from reaching production.
+   - Fast and reliable deployment pipeline with zero manual steps.
+   - Easy rollback by reverting commits in GitHub.
 
 ---
 

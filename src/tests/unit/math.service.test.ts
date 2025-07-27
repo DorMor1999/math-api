@@ -107,4 +107,33 @@ describe('Math Service', () => {
       expect(mathService.divide(1, 5)).toBe(0.2);
     });
   });
+
+
+  describe('power()', () => {
+    it('raises a number to a positive power', () => {
+      expect(mathService.power(2, 3)).toBe(8);
+    });
+
+    it('raises a number to the power of zero', () => {
+      expect(mathService.power(5, 0)).toBe(1);
+      expect(mathService.power(0, 0)).toBe(1); // 0^0 is often defined as 1
+    }); 
+
+    it('raises a number to a negative power', () => {
+      expect(mathService.power(2, -2)).toBe(0.25);
+      expect(mathService.power(5, -1)).toBe(0.2);
+    });
+
+    it('raises zero to a positive power', () => {
+      expect(mathService.power(0, 3)).toBe(0);
+    });
+
+    it('raises a negative number to an even power', () => {
+      expect(mathService.power(-2, 2)).toBe(4);
+    });
+
+    it('raises a negative number to an odd power', () => {
+      expect(mathService.power(-2, 3)).toBe(-8);
+    });
+  });
 });

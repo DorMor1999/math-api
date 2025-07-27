@@ -9,5 +9,6 @@ router.post('/add', validate('add'), mathController.add);
 router.post('/subtract', validate('subtract'), mathController.subtract);
 router.post('/multiply', validate('multiply'), mathController.multiply);
 router.post('/divide', validate('divide'), mathController.divide);
+router.post('/power', validate('power'), mathController.power);
 
 export default router;

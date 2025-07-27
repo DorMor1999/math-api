@@ -41,3 +41,13 @@ export const divide = (req: Request, res: Response) => {
     res.status(400).json({ error: error.message || 'Invalid operation' });
   }
 };
+
+export const power = (req: Request, res: Response) => {
+  try {
+    const { base, exponent } = req.body;
+    const result = mathService.power(base, exponent);
+    res.json({ result });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
+  }
+}
